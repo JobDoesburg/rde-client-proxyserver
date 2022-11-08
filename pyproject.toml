@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "rde-client-proxyserver"
+version = "0.1.0"
+description = ""
+authors = ["Job Doesburg <job.doesburg@surf.nl>"]
+readme = "README.md"
+repository = "https://gitlab.surf.nl/filesender/rde-client-proxyserver"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^2.2.2"
+flask-sock = "^0.5.2"
+gunicorn = "^20.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+

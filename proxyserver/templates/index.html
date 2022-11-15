@@ -45,7 +45,9 @@
           initSocket(token);
           log("=== Opened new socket for " + token + " ===", 'grey');
         }
-        socket.send(textField.value);
+        const text = textField.value;
+        const data = JSON.stringify(text);
+        socket.send(data);
         log('>>> ' + textField.value, 'red');
         textField.value = '';
       }

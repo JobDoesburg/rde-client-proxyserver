@@ -4,7 +4,8 @@ from flask import Flask, render_template
 from flask_sock import Sock
 
 app = Flask(__name__)
-sock = Sock(app)
+app.config['SOCK_SERVER_OPTIONS'] = {'ping_interval': 25}
+sock = Sock(app, )
 
 connections = {}
 

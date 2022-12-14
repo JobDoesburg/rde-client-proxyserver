@@ -9,12 +9,6 @@ sock = Sock(app, )
 
 connections = {}
 
-
-@app.route("/")
-def index():
-    return render_template("index.html")
-
-
 @app.route("/open")
 def open_new_socket():
     # TODO authenticate this route

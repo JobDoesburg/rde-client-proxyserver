@@ -22,7 +22,7 @@ Also, inactive sockets should be closed after a certain amount of time, and the 
 ### Security considerations
 The sole purpose of this server is to enable communication between the RDE JS client and the RDE app.
 The server does **not** store data or process any data in an unencrypted form. 
-However, under the current [decryption handshake protocol](https://gitlab.surf.nl/filesender/rde-js-client/-/blob/main/src/decryption/handshake-protocol.md), an active MITM attack on the proxy server could allow an attacker to get access to the retrieved key.
+However, under the current [decryption handshake protocol](https://github.com/JobDoesburg/rde-js-client/-/blob/main/src/decryption/handshake-protocol.md), an active MITM attack on the proxy server could allow an attacker to get access to the retrieved key.
 This is because there is no further confirmation that the browser and app are using the same shared secret. 
 This is a known issue and should be addressed in the future, but is not a priority at the moment. 
 It can easily be resolved by adding some confirmation token to the handshake protocol.
